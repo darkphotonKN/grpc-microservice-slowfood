@@ -1,15 +1,15 @@
 package main
 
+import "context"
+
 type store struct {
 	// TODO: add mongo db instance
 }
 
-func NewStore(st OrdersStore) *store {
-	return &store{
-		store: st,
-	}
+func NewStore() *store {
+	return &store{}
 }
 
-func (s *store) CreateOrder() error {
+func (s *store) Create(context.Context) error {
 	return nil
 }
