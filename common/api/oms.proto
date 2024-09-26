@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option = "github.com/darkphotonKN/slowfood-microservice-common";
+option go_package = "github.com/darkphotonKN/slowfood-microservice-common";
 
 package api;
 
@@ -24,12 +24,14 @@ message Items {
   string PriceID = 4;
 }
 
-message ItemsWithQuanity {
+message ItemsWithQuantity {
   string ID = 1;
   int32 Quantity = 2;
 }
 
 message CreateOrderRequest {
   string customerID = 1;
-  repeated ItemsWithQuantity Items = 2
+  repeated ItemsWithQuantity Items = 2;
 }
+
+
